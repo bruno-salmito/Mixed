@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Alert Box</title>
+</head>
+<body>
+    <!-- Botões -->
+    <button type="button" class="btn alert-btn" data-target="popup-success">Sucesso</button>
+    <button type="button" class="btn alert-btn" data-target="popup-warning">Aviso</button>
+    <button type="button" class="btn alert-btn"data-target="popup-error">Error</button>
+    <button type="button" class="btn alert-btn" data-target="popup-info">Alerta</button>
+
+    <!-- Popup success start -->
+    <div class="alertBox" id="popup-success">
+        <div class="boxContent">
+            <div class="boxIcon">
+                <img src="./img/success.svg" alt="">
+            </div>
+            <div class="boxInner">
+                <h3>Sucesso</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <button type="button" class="close-alert">&times;</button>
+        </div>
+    </div>
+    <!-- Popup success stop -->
+
+    <!-- Popup Warning start -->
+    <div class="alertBox" id="popup-warning">
+        <div class="boxContent">
+            <div class="boxIcon">
+                <img src="./img/warning.png" alt="">
+            </div>
+            <div class="boxInner">
+                <h3>Aviso</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <button type="button" class="close-alert">&times;</button>
+        </div>
+    </div>
+    <!-- Popup Warning end -->
+
+    <!-- Popup Error start -->
+    <div class="alertBox" id="popup-error">
+        <div class="boxContent">
+            <div class="boxIcon">
+                <img src="./img/error.png" alt="">
+            </div>
+            <div class="boxInner">
+                <h3>Erro</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <button type="button" class="close-alert">&times;</button>
+        </div>
+    </div>
+    <!-- Popup Error end -->
+
+        <!-- Popup Info start -->
+        <div class="alertBox" id="popup-info">
+            <div class="boxContent">
+                <div class="boxIcon">
+                    <img src="./img/info.png" alt="">
+                </div>
+                <div class="boxInner">
+                    <h3>Info</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <button type="button" class="close-alert">&times;</button>
+            </div>
+        </div>
+        <!-- Popup Info end -->
+
+        
+
+    <script src="./app/app.js"></script>
+</body>
+</html>

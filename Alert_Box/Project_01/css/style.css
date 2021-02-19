@@ -1,0 +1,203 @@
+/* Reset document and other settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bgColorSuccess: #e8f4e8;
+    --colorBorderSuccess: #a8f4a8;
+    --colorTitleSuccess: #279427;
+    --colorTextSuccess: #528652;
+    --bgColorWarning: #fef2da;
+    --colorBorderWarning: #f2a53b;
+    --colorTitleWarning: #f2a53b;
+    --colorTextWarning: #897754;
+    --bgColorError: #ffe7e3;
+    --colorBorderError: #ef754c;
+    --colorTitleError: #ef754c;
+    --colorTextError: #897754;
+    --bgcolorInfo: #e0eefb;
+    --colorBorderInfo: #57a7ec;
+    --colorTitleInfo: #57a7ec;
+    --colorTextInfo: #566f87;
+}
+
+/* Animation */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* BTN */
+.btn {
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Alert Box */
+.alertBox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.alertBox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.alertBox.show .boxContent {
+    animation: zoomIn 0.3s ease-in;
+}
+
+.alertBox .boxContent {
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    flex-direction: 0 0 500px;
+    display: flex;
+    align-items: center;
+}
+
+.alertBox .boxContent .boxIcon img {
+    max-width: 50px;
+    min-width: 30px;
+    width: 100%;
+    display: block;
+}
+
+.alertBox .boxContent .boxInner {
+    flex: 0 0 calc(100% - 90px);
+    max-width: calc(100% - 90px);
+    padding: 0 20px;
+}
+
+.alertBox .boxContent h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.alertBox .boxContent p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.alertBox .boxContent .close-alert {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    background-color: transparent;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.alertBox .boxContent .close-alert:focus {
+    outline: none;
+}
+
+.alertBox .boxContent .close-alert:hover {
+    transform: rotate(90deg);
+}
+
+
+/* Success Popup box */
+#popup-success .boxContent {
+    background-color: var(--bgColorSuccess);
+    border: 2px solid var(--colorBorderSuccess);
+}
+
+#popup-success .boxContent .close-alert,
+#popup-success .boxContent h3 {
+    color: var(--colorTitleSuccess);
+}
+
+#popup-success .boxContent p {
+    color: var(--colorTextSuccess);
+}
+
+/* Warning Popup box */
+#popup-warning .boxContent {
+    background-color: var(--bgColorWarning);
+    border: 2px solid var(--colorBorderWarning);
+}
+
+#popup-warning .boxContent .close-alert,
+#popup-warning .boxContent h3 {
+    color: var(--colorTitleWarning);
+}
+
+#popup-warning .boxContent p {
+    color: var(--colorTextWarning);
+}
+
+/* Warning Popup box */
+#popup-warning .boxContent {
+    background-color: var(--bgColorWarning);
+    border: 2px solid var(--colorBorderWarning);
+}
+
+#popup-warning .boxContent .close-alert,
+#popup-warning .boxContent h3 {
+    color: var(--colorTitleWarning);
+}
+
+#popup-warning .boxContent p {
+    color: var(--colorTextWarning);
+}
+
+/* Error Popup Box */
+#popup-error .boxContent {
+    background-color: var(--bgColorError);
+    border: 2px solid var(--colorBorderError);
+}
+
+#popup-error .boxContent .close-alert,
+#popup-error .boxContent h3 {
+    color: var(--colorTitleError);
+}
+
+#popup-error .boxContent p {
+    color: var(--colorTextError);
+}
+
+/* Info Popup Box */
+#popup-info .boxContent {
+    background-color: var(--bgcolorInfo);
+    border: 2px solid var(--colorBorderInfo);
+}
+
+#popup-info .boxContent .close-alert,
+#popup-info .boxContent h3 {
+    color: var(--colorTitleInfo);
+}
+
+#popup-info .boxContent p {
+    color: var(--colorTextInfo);
+}
