@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>3D Social Icons</title>
+</head>
+<body>
+    <section class="socialMedia">
+        <ul class="box">
+            <li data-text="Facebook" data-color="#1877f2">
+                <a href="#" class="facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li data-text="Instagram" data-color="#e4405f">
+                <a href="#" class="instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li data-text="Twitter" data-color="#0099ff">
+                <a href="#" class="twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li data-text="WhatsApp" data-color="#14dd14">
+                <a href="#" class="whatsapp">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="tilt.js"></script>
+    <script>
+        let list = document.querySelectorAll('.box li');
+        let bg = document.querySelector('.socialMedia');
+
+        list.forEach(elements => {
+
+            // Background social color
+            elements.addEventListener('mouseenter', function(event){
+                let color = event.target.getAttribute('data-color');
+                bg.style.backgroundColor = color;
+            })
+
+            // Background color default
+            elements.addEventListener('mouseleave', function (event){
+                bg.style.backgroundColor = '#fff';
+            })
+
+        })
+
+        VanillaTilt.init(document.querySelectorAll(".box li a"), {
+		max: 30,
+		speed: 400,
+        glare: true,
+        "max-glare":  1
+
+	});
+    </script>
+</body>
+</html>
