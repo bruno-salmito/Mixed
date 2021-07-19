@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Player áudio</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="music">
+            <img src="img/logo.jpeg">
+            <div class="info">
+                <h2>URL Melt - Unicorn Heads</h2>
+                <p>Album - Youtube music</p>
+
+                <div id="waveform"></div>
+                <div class="controls">
+                    <img src="./img/play.png" id="playBtn">
+                    <img src="./img/stop.png" id="stopBtn">
+                    <img src="./img/volume.png" id="volumeBtn">
+                </div>
+
+            </div>
+            <!-- info -->
+
+        </div>
+        <!-- music -->
+    </div>
+    <!-- hero -->
+
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
+    <script>
+        // Variáveis de controle
+        const playBtn = document.querySelector('#playBtn');
+        const stopBtn = document.querySelector('#stopBtn');
+        const volumeBtn = document.querySelector('#volumeBtn');
+
+        let wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#dde5ec',
+            progressColor: '#03cebf',
+            barWidth: 2,
+            height: 90,
+            responsive: true,
+            hideScrollbar: true,
+            barRadius: 2
+        });
+
+        wavesurfer.load('./audio/URL Melt - Unicorn Heads.mp3');
+
+        // Adiciona os eventos de escuta
+        // playBtn.onclick() = function(){
+        //     // Comandos
+        // }
+
+        playBtn.addEventListener('click',()=>{
+            wavesurfer.playPause();
+            if(playBtn.src.includes('play.png')){
+                // Altera para pause.png
+                playBtn.src = './img/pause.png';
+            }else{
+                // Altera para a play.png
+                playBtn.src = './img/play.png';
+            }
+        });
+
+        stopBtn.addEventListener('click', ()=>{
+            wavesurfer.stop();
+            playBtn.src = './img/play.png'
+        });
+
+        volumeBtn.addEventListener('click', ()=>{
+            wavesurfer.toggleMute();
+            if(volumeBtn.src.includes('volume.png')){
+                // Alterar para mute
+                volumeBtn.src = './img/mute.png';
+            }else{
+                // Altera para o botao de volume ativado
+                volumeBtn.src = './img/volume.png';
+            }
+        });
+
+
+    wavesurfer.on('finish', function () {
+        playBtn.src = './img/play.png';
+        wavesurfer.stop();
+    });
+    </script>
+</body>
+</html>

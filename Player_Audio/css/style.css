@@ -1,0 +1,60 @@
+/* Reset do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* hero */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), #6b3c3c), url('../img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* music */
+.music {
+    width: 90%;
+    padding: 30px;
+    background-color: rgba(14, 9, 9, 0.74);
+    display: flex;
+}
+
+.music img {
+    width: 300px;
+}
+
+.music .info {
+    color: #fff;
+    margin-left: 30px;
+    flex: 1;
+}
+
+.music .info h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.music .info p {
+    font-size: 20px;
+    margin: 10px 0 40px 0;
+}
+
+/* controls */
+.controls {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.controls img {
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
