@@ -1,0 +1,70 @@
+/* Reset do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #221d1d;
+}
+
+/* Skills */
+.skills {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    color: #b1a1a1;
+}
+
+.skillName {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skillBar {
+    height: 10px;
+    background-color: #cacaca;
+    border-radius: 8px;
+}
+
+.skillPer {
+    width: 0;
+    height: 10px;
+    background-color: #2596be;
+    border-radius: 8px;
+    position: relative;
+    transition: all 2s ease;
+}
+
+.skillPer::before {
+    content: attr(per);
+    position: absolute;
+    top: -31px;
+    right: -20px;
+    transform: translateX(-50%);
+    padding: 5px 6px;
+    background-color: #3684a0;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.skillPer::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #3684a0;
+    top: -12px;
+    right: -6px;
+    border-radius: 2px;
+    transform: translateX(-50%) rotate(45deg);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Skills Bar</title>
+</head>
+<body>
+    <div class="skills">
+        <div class="skill">
+            <div class="skillName">HTML5</div>
+            <div class="skillBar">
+                <div class="skillPer" per="75"></div>
+            </div>
+        </div>
+        <!-- skill -->
+
+        <div class="skill">
+            <div class="skillName">CSS3</div>
+            <div class="skillBar">
+                <div class="skillPer" per="80"></div>
+            </div>
+        </div>
+        <!-- skill -->
+
+        <div class="skill">
+            <div class="skillName">JavaScript</div>
+            <div class="skillBar">
+                <div class="skillPer" per="60"></div>
+            </div>
+        </div>
+        <!-- skill -->
+    </div>
+    <!-- skills -->
+
+    <script src="js/jquery.js"></script>
+    <script>
+
+        $('.skillPer').each(function(){
+            var $this = $(this);
+            var per = $this.attr('per');
+            $this.css("width",per + '%');
+        });
+    </script>
+</body>
+</html>
