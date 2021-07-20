@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Side Bar Responsivo</title>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <div class="logoContent">
+            <div class="logo">
+                <i class='bx bxl-nodejs'></i>
+                <div class="logoName">Bruno Salmito</div>
+            </div>
+            <!-- logo -->
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <!-- logoContent -->
+        <ul class="nav_list">
+
+            <li>
+                <i class='bx bx-search' ></i>
+                <input type="search" name="search" placeholder="Procurar...">
+                <span class="toolipe">Procurar</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Dashboard</span>
+                    <span class="toolipe">Dashboard</span>
+                </a>
+            </li>
+
+            
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Usuário</span>
+                    <span class="toolipe">Usuário</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Configurações</span>
+                    <span class="toolipe">Configurações</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder-open' ></i>
+                    <span class="links_name">Arquivos</span>
+                    <span class="toolipe">Arquivos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat' ></i>
+                    <span class="links_name">Mensagens</span>
+                    <span class="toolipe">Mensagens</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-bar-chart' ></i>
+                    <span class="links_name">Relatórios</span>
+                    <span class="toolipe">Relatórios</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart-alt' ></i>
+                    <span class="links_name">Vendas</span>
+                    <span class="toolipe">Vendas</span>
+                </a>
+            </li>
+        </ul>
+        <!-- nav_list -->
+        <div class="profileContent">
+            <div class="profile">
+                <div class="profileDetail">
+                    <img src="./img/brunosalmito.png">
+                    <div class="name_job">
+                        <div class="name">Bruno Salmito</div>
+                        <div class="job">Web Developer</div>
+                    </div>
+                </div>
+                <!-- profileDetail -->
+                <i class='bx bx-log-out' id="logout" ></i>
+            </div>
+            <!-- profile -->
+        </div>
+        <!-- profileContent -->
+    </div>
+    <!-- sidebar -->
+
+    <div class="homeContent">
+        <h2>Home</h2>
+    </div>
+
+    <script>
+        // variáveis
+        const btn = document.querySelector('#btn');
+        const bxSearch = document.querySelector('.bx-search');
+        const sidebar = document.querySelector('.sidebar');
+        const home = document.querySelector('.homeContent');
+
+        // Eventos de escuta do click
+        btn.addEventListener('click',()=>{
+            sidebar.classList.toggle('active');
+            home.classList.toggle('active');
+        });
+
+        bxSearch.addEventListener('click',()=>{
+            sidebar.classList.toggle('active');
+            home.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
