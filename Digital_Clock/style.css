@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.4s ease;
+}
+
+:root {
+    --mainBgcolor: #f0f8ff;
+    --mainBgDark: #24292d;
+    --clockBgDark: #323840;
+}
+
+/* main */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainBgcolor);
+}
+
+
+main .container {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* icons */
+
+main .container .icons i {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-color: var(--clockBgDark);
+}
+
+main .container .icons i.fa-sun {
+    opacity: 0;
+    pointer-events: none;
+}
+
+main .container .time {
+    display: flex;
+    align-items: center;
+}
+
+main .container .time .time-colon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+main .container .time-colon .am-pm {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container .time .time-colon .text-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--mainBgcolor);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.time .time-colon .text-box,
+.time .time-colon .colon {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.time .time-colon .text-box .text {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.time .time-colon .colon {
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+/* dark section */
+
+main.dark {
+    background-color: var(--mainBgDark);
+}
+
+main.dark .container {
+    background-color: var(--clockBgDark);
+}
+
+main.dark .container .icons i {
+    background-color: #fff;
+    color: var(--clockBgDark);
+}
+
+main.dark .container .icons i.fa-sun {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+main.dark .container .time-colon .text-box {
+    background: var(--mainBgDark);
+}
+
+main.dark .time .time-colon .text-box,
+main.dark .time .time-colon .colon,
+main.dark .time .time-colon .am-pm {
+    color: #fff;
+}
